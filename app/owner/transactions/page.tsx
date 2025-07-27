@@ -103,11 +103,11 @@ export default function TransactionsPage() {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case "Completed":
-        return <Badge className="bg-green-100 text-green-700">Completed</Badge>
+        return <Badge className="bg-cyan-100 text-cyan-700">Completed</Badge>
       case "Pending":
-        return <Badge className="bg-yellow-100 text-yellow-700">Pending</Badge>
+        return <Badge className="bg-cyan-100 text-cyan-700">Pending</Badge>
       case "Failed":
-        return <Badge className="bg-red-100 text-red-700">Failed</Badge>
+        return <Badge className="bg-cyan-100 text-cyan-700">Failed</Badge>
       default:
         return <Badge variant="secondary">{status}</Badge>
     }
@@ -129,11 +129,11 @@ export default function TransactionsPage() {
           <p className="text-gray-600">Track all sales transactions and payments</p>
         </div>
         <div className="flex gap-3">
-          <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
+          <Button variant="outline" className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent">
             <Download className="w-4 h-4 mr-2" />
             Export
           </Button>
-          <Button className="bg-green-500 hover:bg-green-600 text-white">
+          <Button className="bg-cyan-500 hover:bg-cyan-600 text-white">
             <Filter className="w-4 h-4 mr-2" />
             Advanced Filter
           </Button>
@@ -142,21 +142,21 @@ export default function TransactionsPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Transactions</CardTitle>
-            <Receipt className="h-4 w-4 text-green-500" />
+            <Receipt className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{totalTransactions}</div>
-            <p className="text-xs text-green-600">{completedTransactions} completed</p>
+            <p className="text-xs text-cyan-600">{completedTransactions} completed</p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Revenue</CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹{totalRevenue.toLocaleString()}</div>
@@ -164,21 +164,21 @@ export default function TransactionsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹{totalProfit.toLocaleString()}</div>
-            <p className="text-xs text-green-600">{((totalProfit / totalRevenue) * 100).toFixed(1)}% margin</p>
+            <p className="text-xs text-cyan-600">{((totalProfit / totalRevenue) * 100).toFixed(1)}% margin</p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Success Rate</CardTitle>
-            <Calendar className="h-4 w-4 text-green-500" />
+            <Calendar className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">
@@ -190,7 +190,7 @@ export default function TransactionsPage() {
       </div>
 
       {/* Transactions Table */}
-      <Card className="border-green-200">
+      <Card className="border-cyan-200">
         <CardHeader>
           <CardTitle>All Transactions</CardTitle>
           <CardDescription>Complete history of sales transactions</CardDescription>
@@ -230,10 +230,10 @@ export default function TransactionsPage() {
             </Select>
           </div>
 
-          <div className="rounded-md border border-green-100">
+          <div className="rounded-md border border-cyan-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-green-50">
+                <TableRow className="bg-cyan-50">
                   <TableHead className="font-semibold text-gray-900">Transaction ID</TableHead>
                   <TableHead className="font-semibold text-gray-900">Dealer</TableHead>
                   <TableHead className="font-semibold text-gray-900">Product</TableHead>
@@ -249,13 +249,13 @@ export default function TransactionsPage() {
               <TableBody>
                 {filteredTransactions.map((transaction) => (
                   <TableRow key={transaction.id} className="hover:bg-gray-50">
-                    <TableCell className="font-mono text-sm font-medium text-green-600">{transaction.id}</TableCell>
+                    <TableCell className="font-mono text-sm font-medium text-cyan-600">{transaction.id}</TableCell>
                     <TableCell className="font-medium text-gray-900">{transaction.dealer}</TableCell>
                     <TableCell>{transaction.product}</TableCell>
                     <TableCell className="text-center">{transaction.quantity}</TableCell>
                     <TableCell>₹{transaction.unitPrice.toLocaleString()}</TableCell>
                     <TableCell className="font-medium">₹{transaction.totalAmount.toLocaleString()}</TableCell>
-                    <TableCell className="font-medium text-green-600">₹{transaction.profit.toLocaleString()}</TableCell>
+                    <TableCell className="font-medium text-cyan-600">₹{transaction.profit.toLocaleString()}</TableCell>
                     <TableCell>{transaction.date}</TableCell>
                     <TableCell>{getStatusBadge(transaction.status)}</TableCell>
                     <TableCell>

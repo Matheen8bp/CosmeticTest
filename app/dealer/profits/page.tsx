@@ -105,11 +105,11 @@ export default function ProfitsPage() {
 
   const getMarginBadge = (margin: number) => {
     if (margin >= 60) {
-      return <Badge className="bg-green-100 text-green-700">High</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">High</Badge>
     } else if (margin >= 40) {
-      return <Badge className="bg-yellow-100 text-yellow-700">Medium</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Medium</Badge>
     } else {
-      return <Badge className="bg-red-100 text-red-700">Low</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Low</Badge>
     }
   }
 
@@ -133,7 +133,7 @@ export default function ProfitsPage() {
               <SelectItem value="month">This Month</SelectItem>
             </SelectContent>
           </Select>
-          <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
+          <Button variant="outline" className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent">
             <Download className="w-4 h-4 mr-2" />
             Export
           </Button>
@@ -142,56 +142,56 @@ export default function ProfitsPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
-            <DollarSign className="h-4 w-4 text-green-500" />
+            <DollarSign className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹{totalProfit.toLocaleString()}</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +22% from last month
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Revenue</CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹{totalRevenue.toLocaleString()}</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +15% from last month
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Sales</CardTitle>
-            <Target className="h-4 w-4 text-green-500" />
+            <Target className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{totalSales}</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +8 this month
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Avg Profit Margin</CardTitle>
-            <Calendar className="h-4 w-4 text-green-500" />
+            <Calendar className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{avgMargin.toFixed(1)}%</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +3.2% improvement
             </p>
@@ -202,7 +202,7 @@ export default function ProfitsPage() {
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Profit Trend */}
-        <Card className="border-green-200">
+        <Card className="border-cyan-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Profit Trend</CardTitle>
             <CardDescription>Monthly profit and sales performance</CardDescription>
@@ -228,7 +228,7 @@ export default function ProfitsPage() {
         </Card>
 
         {/* Product Profitability */}
-        <Card className="border-green-200">
+        <Card className="border-cyan-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Product Profitability</CardTitle>
             <CardDescription>Profit by product category</CardDescription>
@@ -254,7 +254,7 @@ export default function ProfitsPage() {
       </div>
 
       {/* Sales History */}
-      <Card className="border-green-200">
+      <Card className="border-cyan-200">
         <CardHeader>
           <CardTitle className="text-gray-900">Sales History</CardTitle>
           <CardDescription>Detailed breakdown of all your sales and profits</CardDescription>
@@ -274,10 +274,10 @@ export default function ProfitsPage() {
             </Select>
           </div>
 
-          <div className="rounded-md border border-green-100">
+          <div className="rounded-md border border-cyan-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-green-50">
+                <TableRow className="bg-cyan-50">
                   <TableHead className="font-semibold text-gray-900">Date</TableHead>
                   <TableHead className="font-semibold text-gray-900">Product</TableHead>
                   <TableHead className="font-semibold text-gray-900">Customer</TableHead>
@@ -297,7 +297,7 @@ export default function ProfitsPage() {
                     <TableCell className="text-center">{sale.quantity}</TableCell>
                     <TableCell>₹{sale.totalCost.toLocaleString()}</TableCell>
                     <TableCell className="font-medium">₹{sale.totalRevenue.toLocaleString()}</TableCell>
-                    <TableCell className="font-medium text-green-600">₹{sale.profit.toLocaleString()}</TableCell>
+                    <TableCell className="font-medium text-cyan-600">₹{sale.profit.toLocaleString()}</TableCell>
                     <TableCell>{getMarginBadge(sale.margin)}</TableCell>
                   </TableRow>
                 ))}
