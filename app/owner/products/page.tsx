@@ -148,7 +148,7 @@ export default function ProductsPage() {
         </div>
         <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
           <DialogTrigger asChild>
-            <Button className="bg-pink-500 hover:bg-pink-600 text-white">
+            <Button className="bg-green-500 hover:bg-green-600 text-white">
               <Plus className="w-4 h-4 mr-2" />
               Add Product
             </Button>
@@ -231,7 +231,7 @@ export default function ProductsPage() {
                 </div>
               </div>
               {newProduct.manufacturerPrice && (
-                <div className="p-3 bg-pink-50 rounded-lg">
+                <div className="p-3 bg-green-50 rounded-lg">
                   <p className="text-sm text-gray-600">
                     <strong>Calculated Dealer Price:</strong> ₹
                     {calculateOwnerToDealer(Number.parseInt(newProduct.manufacturerPrice)).toFixed(2)}
@@ -244,7 +244,7 @@ export default function ProductsPage() {
               <Button variant="outline" onClick={() => setIsAddDialogOpen(false)}>
                 Cancel
               </Button>
-              <Button onClick={handleAddProduct} className="bg-pink-500 hover:bg-pink-600">
+              <Button onClick={handleAddProduct} className="bg-green-500 hover:bg-green-600">
                 Add Product
               </Button>
             </DialogFooter>
@@ -254,20 +254,20 @@ export default function ProductsPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Products</CardTitle>
-            <Package className="h-4 w-4 text-pink-500" />
+            <Package className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{products.length}</div>
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Stock</CardTitle>
-            <Package className="h-4 w-4 text-pink-500" />
+            <Package className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">
@@ -276,7 +276,7 @@ export default function ProductsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Low Stock Items</CardTitle>
             <AlertTriangle className="h-4 w-4 text-yellow-500" />
@@ -286,7 +286,7 @@ export default function ProductsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Avg. Profit Margin</CardTitle>
             <TrendingUp className="h-4 w-4 text-green-500" />
@@ -298,7 +298,7 @@ export default function ProductsPage() {
       </div>
 
       {/* Search and Filters */}
-      <Card className="border-pink-200">
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle>Product Inventory</CardTitle>
           <CardDescription>Manage your product catalog and pricing</CardDescription>
@@ -329,10 +329,10 @@ export default function ProductsPage() {
           </div>
 
           {/* Products Table */}
-          <div className="rounded-md border border-pink-100">
+          <div className="rounded-md border border-green-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-pink-50">
+                <TableRow className="bg-green-50">
                   <TableHead className="font-semibold text-gray-900">Product</TableHead>
                   <TableHead className="font-semibold text-gray-900">SKU</TableHead>
                   <TableHead className="font-semibold text-gray-900">MRP</TableHead>
@@ -356,7 +356,7 @@ export default function ProductsPage() {
                     <TableCell className="font-mono text-sm">{product.sku}</TableCell>
                     <TableCell className="font-medium">₹{product.mrp.toLocaleString()}</TableCell>
                     <TableCell>₹{product.manufacturerPrice.toLocaleString()}</TableCell>
-                    <TableCell className="font-medium text-pink-600">
+                    <TableCell className="font-medium text-green-600">
                       ₹{product.ownerToDealer.toLocaleString()}
                     </TableCell>
                     <TableCell>
@@ -373,7 +373,7 @@ export default function ProductsPage() {
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="text-pink-600 hover:text-pink-700 hover:bg-pink-50"
+                          className="text-green-600 hover:text-green-700 hover:bg-green-50"
                         >
                           <Edit className="w-4 h-4" />
                         </Button>

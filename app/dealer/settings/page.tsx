@@ -82,12 +82,12 @@ export default function DealerSettingsPage() {
           <Button
             variant="outline"
             onClick={handleReset}
-            className="border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent"
+            className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
           >
             <RefreshCw className="w-4 h-4 mr-2" />
             Reset
           </Button>
-          <Button onClick={handleSave} className="bg-pink-500 hover:bg-pink-600 text-white">
+          <Button onClick={handleSave} className="bg-green-500 hover:bg-green-600 text-white">
             <Save className="w-4 h-4 mr-2" />
             Save Changes
           </Button>
@@ -120,7 +120,7 @@ export default function DealerSettingsPage() {
 
         {/* Store Settings */}
         <TabsContent value="store" className="space-y-6">
-          <Card className="border-pink-200">
+          <Card className="border-green-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Store className="w-5 h-5" />
@@ -130,11 +130,11 @@ export default function DealerSettingsPage() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="flex items-center gap-6">
-                <div className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center">
-                  <Store className="w-8 h-8 text-pink-600" />
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                  <Store className="w-8 h-8 text-green-600" />
                 </div>
                 <div className="space-y-2">
-                  <Button variant="outline" className="border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent">
+                  <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
                     <Upload className="w-4 h-4 mr-2" />
                     Upload Logo
                   </Button>
@@ -222,7 +222,7 @@ export default function DealerSettingsPage() {
 
         {/* Profile Settings */}
         <TabsContent value="profile" className="space-y-6">
-          <Card className="border-pink-200">
+          <Card className="border-green-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <User className="w-5 h-5" />
@@ -232,11 +232,11 @@ export default function DealerSettingsPage() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="flex items-center gap-6">
-                <div className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center">
-                  <User className="w-8 h-8 text-pink-600" />
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                  <User className="w-8 h-8 text-green-600" />
                 </div>
                 <div className="space-y-2">
-                  <Button variant="outline" className="border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent">
+                  <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
                     <Upload className="w-4 h-4 mr-2" />
                     Upload Photo
                   </Button>
@@ -287,7 +287,7 @@ export default function DealerSettingsPage() {
                     <Input id="newPassword" type="password" />
                   </div>
                 </div>
-                <Button className="bg-pink-500 hover:bg-pink-600 text-white">Update Password</Button>
+                <Button className="bg-green-500 hover:bg-green-600 text-white">Update Password</Button>
               </div>
             </CardContent>
           </Card>
@@ -295,7 +295,7 @@ export default function DealerSettingsPage() {
 
         {/* Business Settings */}
         <TabsContent value="business" className="space-y-6">
-          <Card className="border-pink-200">
+          <Card className="border-green-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Target className="w-5 h-5" />
@@ -382,7 +382,7 @@ export default function DealerSettingsPage() {
 
         {/* Notifications */}
         <TabsContent value="notifications" className="space-y-6">
-          <Card className="border-pink-200">
+          <Card className="border-green-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Bell className="w-5 h-5" />
@@ -455,7 +455,7 @@ export default function DealerSettingsPage() {
 
         {/* Security */}
         <TabsContent value="security" className="space-y-6">
-          <Card className="border-pink-200">
+          <Card className="border-green-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="w-5 h-5" />

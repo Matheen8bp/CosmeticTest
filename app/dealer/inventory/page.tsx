@@ -146,7 +146,7 @@ export default function InventoryPage() {
           <h1 className="text-3xl font-bold text-gray-900">Inventory Management</h1>
           <p className="text-gray-600">Manage your product inventory and pricing</p>
         </div>
-        <Button className="bg-pink-500 hover:bg-pink-600 text-white">
+        <Button className="bg-green-500 hover:bg-green-600 text-white">
           <ShoppingCart className="w-4 h-4 mr-2" />
           Request Restock
         </Button>
@@ -154,10 +154,10 @@ export default function InventoryPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Products</CardTitle>
-            <Package className="h-4 w-4 text-pink-500" />
+            <Package className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{totalProducts}</div>
@@ -165,10 +165,10 @@ export default function InventoryPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Inventory Value</CardTitle>
-            <Package className="h-4 w-4 text-pink-500" />
+            <Package className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹{totalInventoryValue.toLocaleString()}</div>
@@ -176,7 +176,7 @@ export default function InventoryPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
             <TrendingUp className="h-4 w-4 text-green-500" />
@@ -187,7 +187,7 @@ export default function InventoryPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Low Stock Items</CardTitle>
             <AlertTriangle className="h-4 w-4 text-yellow-500" />
@@ -200,7 +200,7 @@ export default function InventoryPage() {
       </div>
 
       {/* Inventory Table */}
-      <Card className="border-pink-200">
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle>Product Inventory</CardTitle>
           <CardDescription>Manage your stock levels and pricing</CardDescription>
@@ -230,10 +230,10 @@ export default function InventoryPage() {
             </Select>
           </div>
 
-          <div className="rounded-md border border-pink-100">
+          <div className="rounded-md border border-green-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-pink-50">
+                <TableRow className="bg-green-50">
                   <TableHead className="font-semibold text-gray-900">Product</TableHead>
                   <TableHead className="font-semibold text-gray-900">SKU</TableHead>
                   <TableHead className="font-semibold text-gray-900">Buying Price</TableHead>
@@ -270,14 +270,14 @@ export default function InventoryPage() {
                           <Button
                             size="sm"
                             onClick={() => handlePriceUpdate(item.id)}
-                            className="bg-pink-500 hover:bg-pink-600"
+                            className="bg-green-500 hover:bg-green-600"
                           >
                             Save
                           </Button>
                         </div>
                       ) : (
                         <div className="flex items-center gap-2">
-                          <span className="font-medium text-pink-600">₹{item.sellingPrice.toLocaleString()}</span>
+                          <span className="font-medium text-green-600">₹{item.sellingPrice.toLocaleString()}</span>
                           <Button
                             variant="ghost"
                             size="sm"
@@ -285,7 +285,7 @@ export default function InventoryPage() {
                               setEditingPrice(item.id)
                               setNewPrice(item.sellingPrice.toString())
                             }}
-                            className="text-pink-600 hover:text-pink-700 hover:bg-pink-50"
+                            className="text-green-600 hover:text-green-700 hover:bg-green-50"
                           >
                             <Edit className="w-3 h-3" />
                           </Button>
@@ -313,7 +313,7 @@ export default function InventoryPage() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent"
+                        className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
                       >
                         Sell
                       </Button>

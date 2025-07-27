@@ -129,11 +129,11 @@ export default function TransactionsPage() {
           <p className="text-gray-600">Track all sales transactions and payments</p>
         </div>
         <div className="flex gap-3">
-          <Button variant="outline" className="border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent">
+          <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
             <Download className="w-4 h-4 mr-2" />
             Export
           </Button>
-          <Button className="bg-pink-500 hover:bg-pink-600 text-white">
+          <Button className="bg-green-500 hover:bg-green-600 text-white">
             <Filter className="w-4 h-4 mr-2" />
             Advanced Filter
           </Button>
@@ -142,10 +142,10 @@ export default function TransactionsPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Transactions</CardTitle>
-            <Receipt className="h-4 w-4 text-pink-500" />
+            <Receipt className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{totalTransactions}</div>
@@ -153,10 +153,10 @@ export default function TransactionsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Revenue</CardTitle>
-            <TrendingUp className="h-4 w-4 text-pink-500" />
+            <TrendingUp className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹{totalRevenue.toLocaleString()}</div>
@@ -164,7 +164,7 @@ export default function TransactionsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
             <TrendingUp className="h-4 w-4 text-green-500" />
@@ -175,10 +175,10 @@ export default function TransactionsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Success Rate</CardTitle>
-            <Calendar className="h-4 w-4 text-pink-500" />
+            <Calendar className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">
@@ -190,7 +190,7 @@ export default function TransactionsPage() {
       </div>
 
       {/* Transactions Table */}
-      <Card className="border-pink-200">
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle>All Transactions</CardTitle>
           <CardDescription>Complete history of sales transactions</CardDescription>
@@ -230,10 +230,10 @@ export default function TransactionsPage() {
             </Select>
           </div>
 
-          <div className="rounded-md border border-pink-100">
+          <div className="rounded-md border border-green-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-pink-50">
+                <TableRow className="bg-green-50">
                   <TableHead className="font-semibold text-gray-900">Transaction ID</TableHead>
                   <TableHead className="font-semibold text-gray-900">Dealer</TableHead>
                   <TableHead className="font-semibold text-gray-900">Product</TableHead>
@@ -249,7 +249,7 @@ export default function TransactionsPage() {
               <TableBody>
                 {filteredTransactions.map((transaction) => (
                   <TableRow key={transaction.id} className="hover:bg-gray-50">
-                    <TableCell className="font-mono text-sm font-medium text-pink-600">{transaction.id}</TableCell>
+                    <TableCell className="font-mono text-sm font-medium text-green-600">{transaction.id}</TableCell>
                     <TableCell className="font-medium text-gray-900">{transaction.dealer}</TableCell>
                     <TableCell>{transaction.product}</TableCell>
                     <TableCell className="text-center">{transaction.quantity}</TableCell>

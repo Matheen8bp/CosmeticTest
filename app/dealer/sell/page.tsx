@@ -122,7 +122,7 @@ export default function SellProductPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Sale Form */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">New Sale</CardTitle>
             <CardDescription>Enter sale details and customer information</CardDescription>
@@ -160,7 +160,7 @@ export default function SellProductPage() {
             </div>
 
             {product && (
-              <div className="p-3 bg-pink-50 rounded-lg">
+              <div className="p-3 bg-green-50 rounded-lg">
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-gray-600">SKU:</span>
@@ -237,7 +237,7 @@ export default function SellProductPage() {
 
             <Button
               onClick={handleSale}
-              className="w-full bg-pink-500 hover:bg-pink-600 text-white"
+              className="w-full bg-green-500 hover:bg-green-600 text-white"
               disabled={
                 !product ||
                 !quantity ||
@@ -253,7 +253,7 @@ export default function SellProductPage() {
         </Card>
 
         {/* Profit Calculator */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900 flex items-center gap-2">
               <Calculator className="w-5 h-5" />
@@ -330,7 +330,7 @@ export default function SellProductPage() {
       </div>
 
       {/* Quick Actions */}
-      <Card className="border-pink-200">
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle className="text-gray-900">Quick Actions</CardTitle>
           <CardDescription>Frequently used products for quick sales</CardDescription>
@@ -340,7 +340,7 @@ export default function SellProductPage() {
             {availableProducts.slice(0, 3).map((product) => (
               <div
                 key={product.id}
-                className="p-4 border border-pink-100 rounded-lg hover:bg-pink-50 transition-colors"
+                className="p-4 border border-green-100 rounded-lg hover:bg-green-50 transition-colors"
               >
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-medium text-gray-900">{product.name}</h3>
@@ -354,7 +354,7 @@ export default function SellProductPage() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent"
+                  className="w-full border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
                   onClick={() => {
                     setSelectedProduct(product.id)
                     setSellingPrice(product.currentSellingPrice.toString())

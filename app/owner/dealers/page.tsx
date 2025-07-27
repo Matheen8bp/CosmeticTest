@@ -133,7 +133,7 @@ export default function DealersPage() {
         </div>
         <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
           <DialogTrigger asChild>
-            <Button className="bg-pink-500 hover:bg-pink-600 text-white">
+            <Button className="bg-green-500 hover:bg-green-600 text-white">
               <Plus className="w-4 h-4 mr-2" />
               Add Dealer
             </Button>
@@ -186,7 +186,7 @@ export default function DealersPage() {
               <Button variant="outline" onClick={() => setIsAddDialogOpen(false)}>
                 Cancel
               </Button>
-              <Button onClick={handleAddDealer} className="bg-pink-500 hover:bg-pink-600">
+              <Button onClick={handleAddDealer} className="bg-green-500 hover:bg-green-600">
                 Add Dealer
               </Button>
             </DialogFooter>
@@ -196,10 +196,10 @@ export default function DealersPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Dealers</CardTitle>
-            <Users className="h-4 w-4 text-pink-500" />
+            <Users className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{dealers.length}</div>
@@ -207,10 +207,10 @@ export default function DealersPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Sales</CardTitle>
-            <TrendingUp className="h-4 w-4 text-pink-500" />
+            <TrendingUp className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">
@@ -219,7 +219,7 @@ export default function DealersPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
             <TrendingUp className="h-4 w-4 text-green-500" />
@@ -231,10 +231,10 @@ export default function DealersPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Avg Performance</CardTitle>
-            <TrendingUp className="h-4 w-4 text-pink-500" />
+            <TrendingUp className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">
@@ -245,7 +245,7 @@ export default function DealersPage() {
       </div>
 
       {/* Dealers Table */}
-      <Card className="border-pink-200">
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle>Dealer Network</CardTitle>
           <CardDescription>Manage your dealer relationships and track performance</CardDescription>
@@ -273,10 +273,10 @@ export default function DealersPage() {
             </Select>
           </div>
 
-          <div className="rounded-md border border-pink-100">
+          <div className="rounded-md border border-green-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-pink-50">
+                <TableRow className="bg-green-50">
                   <TableHead className="font-semibold text-gray-900">Dealer</TableHead>
                   <TableHead className="font-semibold text-gray-900">Contact</TableHead>
                   <TableHead className="font-semibold text-gray-900">Location</TableHead>
@@ -335,7 +335,7 @@ export default function DealersPage() {
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="text-pink-600 hover:text-pink-700 hover:bg-pink-50"
+                          className="text-green-600 hover:text-green-700 hover:bg-green-50"
                         >
                           <Edit className="w-4 h-4" />
                         </Button>

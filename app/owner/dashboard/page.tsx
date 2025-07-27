@@ -27,10 +27,10 @@ const revenueData = [
 ]
 
 const categoryData = [
-  { name: "Skincare", value: 35, color: "#FF69B4" },
-  { name: "Makeup", value: 30, color: "#FF85C1" },
-  { name: "Fragrance", value: 20, color: "#FFA1D1" },
-  { name: "Hair Care", value: 15, color: "#FFBDE1" },
+  { name: "Skincare", value: 35, color: "#22C55E" },
+  { name: "Makeup", value: 30, color: "#22C55F" },
+  { name: "Fragrance", value: 20, color: "#22C56E" },
+  { name: "Hair Care", value: 15, color: "#22C56F" },
 ]
 
 const topDealers = [
@@ -57,11 +57,11 @@ export default function OwnerDashboard() {
           <p className="text-gray-600">Welcome back! Here's your business overview.</p>
         </div>
         <div className="flex gap-3">
-          <Button className="bg-pink-500 hover:bg-pink-600 text-white">
+          <Button className="bg-green-500 hover:bg-green-600 text-white">
             <Plus className="w-4 h-4 mr-2" />
             Add Product
           </Button>
-          <Button variant="outline" className="border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent">
+          <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
             <Plus className="w-4 h-4 mr-2" />
             Add Dealer
           </Button>
@@ -70,10 +70,10 @@ export default function OwnerDashboard() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Dealers</CardTitle>
-            <Users className="h-4 w-4 text-pink-500" />
+            <Users className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">24</div>
@@ -84,10 +84,10 @@ export default function OwnerDashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Inventory</CardTitle>
-            <Package className="h-4 w-4 text-pink-500" />
+            <Package className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">1,247</div>
@@ -98,10 +98,10 @@ export default function OwnerDashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Products Sold</CardTitle>
-            <ShoppingCart className="h-4 w-4 text-pink-500" />
+            <ShoppingCart className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">3,456</div>
@@ -112,10 +112,10 @@ export default function OwnerDashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-pink-500" />
+            <DollarSign className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹67,000</div>
@@ -130,7 +130,7 @@ export default function OwnerDashboard() {
       {/* Charts Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Revenue Chart */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Monthly Revenue & Profit</CardTitle>
             <CardDescription>Revenue and profit trends over the last 6 months</CardDescription>
@@ -144,19 +144,19 @@ export default function OwnerDashboard() {
                 <Tooltip
                   contentStyle={{
                     backgroundColor: "white",
-                    border: "1px solid #FF69B4",
+                    border: "1px solid rgb(83, 236, 93)",
                     borderRadius: "8px",
                   }}
                 />
-                <Line type="monotone" dataKey="revenue" stroke="#FF69B4" strokeWidth={3} name="Revenue" />
-                <Line type="monotone" dataKey="profit" stroke="#FF85C1" strokeWidth={2} name="Profit" />
+                <Line type="monotone" dataKey="revenue" stroke="rgb(83, 236, 93)" strokeWidth={3} name="Revenue" />
+                <Line type="monotone" dataKey="profit" stroke="rgb(83, 236, 93)" strokeWidth={2} name="Profit" />
               </LineChart>
             </ResponsiveContainer>
           </CardContent>
         </Card>
 
         {/* Category Distribution */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Sales by Category</CardTitle>
             <CardDescription>Product category distribution</CardDescription>
@@ -197,7 +197,7 @@ export default function OwnerDashboard() {
       {/* Tables Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Top Dealers */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Top Performing Dealers</CardTitle>
             <CardDescription>Best dealers by sales performance</CardDescription>
@@ -207,8 +207,8 @@ export default function OwnerDashboard() {
               {topDealers.map((dealer, index) => (
                 <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
-                      <span className="text-sm font-medium text-pink-600">#{index + 1}</span>
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-medium text-green-600">#{index + 1}</span>
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">{dealer.name}</p>
@@ -236,7 +236,7 @@ export default function OwnerDashboard() {
         </Card>
 
         {/* Recent Transactions */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Recent Transactions</CardTitle>
             <CardDescription>Latest sales to dealers</CardDescription>
@@ -254,7 +254,7 @@ export default function OwnerDashboard() {
                   </div>
                   <div className="text-right">
                     <p className="font-medium text-gray-900">₹{transaction.amount.toLocaleString()}</p>
-                    <Badge variant="secondary" className="bg-pink-100 text-pink-700">
+                    <Badge variant="secondary" className="bg-green-100 text-green-700">
                       Completed
                     </Badge>
                   </div>
@@ -263,7 +263,7 @@ export default function OwnerDashboard() {
             </div>
             <Button
               variant="outline"
-              className="w-full mt-4 border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent"
+              className="w-full mt-4 border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
             >
               <Eye className="w-4 h-4 mr-2" />
               View All Transactions

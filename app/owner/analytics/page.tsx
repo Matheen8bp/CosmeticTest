@@ -83,7 +83,7 @@ export default function AnalyticsPage() {
               <SelectItem value="1year">Last Year</SelectItem>
             </SelectContent>
           </Select>
-          <Button variant="outline" className="border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent">
+          <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
             <Download className="w-4 h-4 mr-2" />
             Export Report
           </Button>
@@ -92,10 +92,10 @@ export default function AnalyticsPage() {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-pink-500" />
+            <DollarSign className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹3,28,000</div>
@@ -106,7 +106,7 @@ export default function AnalyticsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
             <Target className="h-4 w-4 text-green-500" />
@@ -120,10 +120,10 @@ export default function AnalyticsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Active Dealers</CardTitle>
-            <Users className="h-4 w-4 text-pink-500" />
+            <Users className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">24</div>
@@ -134,10 +134,10 @@ export default function AnalyticsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Avg Order Value</CardTitle>
-            <Package className="h-4 w-4 text-pink-500" />
+            <Package className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹5,410</div>
@@ -152,7 +152,7 @@ export default function AnalyticsPage() {
       {/* Charts Row 1 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Revenue & Profit Trend */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Revenue & Profit Trend</CardTitle>
             <CardDescription>Monthly performance over the last 6 months</CardDescription>
@@ -194,7 +194,7 @@ export default function AnalyticsPage() {
         </Card>
 
         {/* Category Distribution */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Sales by Category</CardTitle>
             <CardDescription>Revenue distribution across product categories</CardDescription>
@@ -236,7 +236,7 @@ export default function AnalyticsPage() {
       {/* Charts Row 2 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Dealer Performance */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Top Dealer Performance</CardTitle>
             <CardDescription>Sales performance by dealer</CardDescription>
@@ -261,7 +261,7 @@ export default function AnalyticsPage() {
         </Card>
 
         {/* Profit Margin Trend */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Profit Margin Trend</CardTitle>
             <CardDescription>Monthly profit margin percentage</CardDescription>
@@ -287,7 +287,7 @@ export default function AnalyticsPage() {
       </div>
 
       {/* Top Products Table */}
-      <Card className="border-pink-200">
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle className="text-gray-900">Top Performing Products</CardTitle>
           <CardDescription>Best-selling products with performance metrics</CardDescription>
@@ -297,8 +297,8 @@ export default function AnalyticsPage() {
             {topProducts.map((product, index) => (
               <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-bold text-pink-600">#{index + 1}</span>
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <span className="text-sm font-bold text-green-600">#{index + 1}</span>
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">{product.name}</p>
