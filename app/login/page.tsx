@@ -28,12 +28,12 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-white flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white flex items-center justify-center p-4">
       <div className="w-full max-w-4xl grid md:grid-cols-2 gap-8 items-center">
         {/* Left Side - Branding */}
         <div className="text-center md:text-left space-y-6">
           <div className="flex items-center justify-center md:justify-start gap-3">
-            <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -47,12 +47,12 @@ export default function LoginPage() {
               Streamline your distribution network with our comprehensive management platform
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-pink-100">
-                <div className="text-2xl font-bold text-pink-600">500+</div>
+              <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-green-100">
+                <div className="text-2xl font-bold text-green-600">500+</div>
                 <div className="text-sm text-gray-600">Products</div>
               </div>
-              <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-pink-100">
-                <div className="text-2xl font-bold text-pink-600">50+</div>
+              <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-green-100">
+                <div className="text-2xl font-bold text-green-600">50+</div>
                 <div className="text-sm text-gray-600">Dealers</div>
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function LoginPage() {
         </div>
 
         {/* Right Side - Login Form */}
-        <Card className="w-full max-w-md mx-auto border-pink-200 shadow-lg">
+        <Card className="w-full max-w-md mx-auto border-green-200 shadow-lg">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl font-bold">Welcome Back</CardTitle>
             <CardDescription>Sign in to your account</CardDescription>
@@ -68,10 +68,10 @@ export default function LoginPage() {
           <CardContent>
             <Tabs defaultValue="owner" className="w-full">
               <TabsList className="grid w-full grid-cols-2 mb-6">
-                <TabsTrigger value="owner" className="data-[state=active]:bg-pink-500 data-[state=active]:text-white">
+                <TabsTrigger value="owner" className="data-[state=active]:bg-green-500 data-[state=active]:text-white">
                   Owner
                 </TabsTrigger>
-                <TabsTrigger value="dealer" className="data-[state=active]:bg-pink-500 data-[state=active]:text-white">
+                <TabsTrigger value="dealer" className="data-[state=active]:bg-green-500 data-[state=active]:text-white">
                   Dealer
                 </TabsTrigger>
               </TabsList>
@@ -83,7 +83,7 @@ export default function LoginPage() {
                     id="owner-email"
                     type="email"
                     placeholder="owner@cosmeticare.com"
-                    className="focus:border-pink-500 focus:ring-pink-500"
+                    className="focus:border-green-500 focus:ring-green-500"
                   />
                 </div>
                 <div className="space-y-2">
@@ -93,7 +93,7 @@ export default function LoginPage() {
                       id="owner-password"
                       type={showPassword ? "text" : "password"}
                       placeholder="Enter your password"
-                      className="focus:border-pink-500 focus:ring-pink-500 pr-10"
+                      className="focus:border-green-500 focus:ring-green-500 pr-10"
                     />
                     <Button
                       type="button"
@@ -107,7 +107,7 @@ export default function LoginPage() {
                   </div>
                 </div>
                 <Button
-                  className="w-full bg-pink-500 hover:bg-pink-600 text-white"
+                  className="w-full bg-green-500 hover:bg-green-600 text-white"
                   onClick={() => handleLogin("owner")}
                   disabled={isLoading}
                 >
@@ -122,7 +122,7 @@ export default function LoginPage() {
                     id="dealer-email"
                     type="email"
                     placeholder="dealer@example.com"
-                    className="focus:border-pink-500 focus:ring-pink-500"
+                    className="focus:border-green-500 focus:ring-green-500"
                   />
                 </div>
                 <div className="space-y-2">
@@ -132,7 +132,7 @@ export default function LoginPage() {
                       id="dealer-password"
                       type={showPassword ? "text" : "password"}
                       placeholder="Enter your password"
-                      className="focus:border-pink-500 focus:ring-pink-500 pr-10"
+                      className="focus:border-green-500 focus:ring-green-500 pr-10"
                     />
                     <Button
                       type="button"
@@ -146,7 +146,7 @@ export default function LoginPage() {
                   </div>
                 </div>
                 <Button
-                  className="w-full bg-pink-500 hover:bg-pink-600 text-white"
+                  className="w-full bg-green-500 hover:bg-green-600 text-white"
                   onClick={() => handleLogin("dealer")}
                   disabled={isLoading}
                 >
@@ -156,7 +156,7 @@ export default function LoginPage() {
             </Tabs>
 
             <div className="mt-6 text-center">
-              <Button variant="link" className="text-pink-600 hover:text-pink-700">
+              <Button variant="link" className="text-green-600 hover:text-green-700">
                 Forgot your password?
               </Button>
             </div>

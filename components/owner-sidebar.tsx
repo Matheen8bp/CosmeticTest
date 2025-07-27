@@ -55,10 +55,10 @@ export function OwnerSidebar() {
   const pathname = usePathname()
 
   return (
-    <Sidebar className="border-r border-pink-100">
-      <SidebarHeader className="border-b border-pink-100 p-4">
+    <Sidebar className="border-r border-green-100">
+      <SidebarHeader className="border-b border-green-100 p-4">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center">
             <Sparkles className="w-4 h-4 text-white" />
           </div>
           <div>
@@ -70,7 +70,7 @@ export function OwnerSidebar() {
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-pink-600 font-medium">Management</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-green-600 font-medium">Management</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
@@ -78,7 +78,7 @@ export function OwnerSidebar() {
                   <SidebarMenuButton
                     asChild
                     isActive={pathname === item.url}
-                    className="data-[active=true]:bg-pink-50 data-[active=true]:text-pink-700 data-[active=true]:border-r-2 data-[active=true]:border-pink-500"
+                    className="data-[active=true]:bg-green-50 data-[active=true]:text-green-700 data-[active=true]:border-r-2 data-[active=true]:border-green-500"
                   >
                     <Link href={item.url}>
                       <item.icon className="w-4 h-4" />
@@ -92,10 +92,10 @@ export function OwnerSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-4 border-t border-pink-100">
+      <SidebarFooter className="p-4 border-t border-green-100">
         <Button
           variant="outline"
-          className="w-full border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent"
+          className="w-full border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
           asChild
         >
           <Link href="/login">Sign Out</Link>

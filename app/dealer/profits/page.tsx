@@ -133,7 +133,7 @@ export default function ProfitsPage() {
               <SelectItem value="month">This Month</SelectItem>
             </SelectContent>
           </Select>
-          <Button variant="outline" className="border-pink-200 text-pink-600 hover:bg-pink-50 bg-transparent">
+          <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
             <Download className="w-4 h-4 mr-2" />
             Export
           </Button>
@@ -142,7 +142,7 @@ export default function ProfitsPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
             <DollarSign className="h-4 w-4 text-green-500" />
@@ -156,10 +156,10 @@ export default function ProfitsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Revenue</CardTitle>
-            <TrendingUp className="h-4 w-4 text-pink-500" />
+            <TrendingUp className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹{totalRevenue.toLocaleString()}</div>
@@ -170,10 +170,10 @@ export default function ProfitsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Sales</CardTitle>
-            <Target className="h-4 w-4 text-pink-500" />
+            <Target className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{totalSales}</div>
@@ -184,10 +184,10 @@ export default function ProfitsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-pink-200 shadow-lg shadow-pink-100/50">
+        <Card className="border-green-200 shadow-lg shadow-green-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Avg Profit Margin</CardTitle>
-            <Calendar className="h-4 w-4 text-pink-500" />
+            <Calendar className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{avgMargin.toFixed(1)}%</div>
@@ -202,7 +202,7 @@ export default function ProfitsPage() {
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Profit Trend */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Profit Trend</CardTitle>
             <CardDescription>Monthly profit and sales performance</CardDescription>
@@ -228,7 +228,7 @@ export default function ProfitsPage() {
         </Card>
 
         {/* Product Profitability */}
-        <Card className="border-pink-200">
+        <Card className="border-green-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Product Profitability</CardTitle>
             <CardDescription>Profit by product category</CardDescription>
@@ -254,7 +254,7 @@ export default function ProfitsPage() {
       </div>
 
       {/* Sales History */}
-      <Card className="border-pink-200">
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle className="text-gray-900">Sales History</CardTitle>
           <CardDescription>Detailed breakdown of all your sales and profits</CardDescription>
@@ -274,10 +274,10 @@ export default function ProfitsPage() {
             </Select>
           </div>
 
-          <div className="rounded-md border border-pink-100">
+          <div className="rounded-md border border-green-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-pink-50">
+                <TableRow className="bg-green-50">
                   <TableHead className="font-semibold text-gray-900">Date</TableHead>
                   <TableHead className="font-semibold text-gray-900">Product</TableHead>
                   <TableHead className="font-semibold text-gray-900">Customer</TableHead>
