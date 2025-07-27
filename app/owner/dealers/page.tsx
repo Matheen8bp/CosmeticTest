@@ -92,10 +92,10 @@ export default function DealersPage() {
 
   const getStatusBadge = (status: string) => {
     if (status === "Active") {
-      return <Badge className="bg-green-100 text-green-700">Active</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Active</Badge>
     } else {
       return (
-        <Badge variant="secondary" className="bg-red-100 text-red-700">
+        <Badge variant="secondary" className="bg-cyan-100 text-cyan-700">
           Inactive
         </Badge>
       )
@@ -104,11 +104,11 @@ export default function DealersPage() {
 
   const getPerformanceBadge = (performance: number) => {
     if (performance > 10) {
-      return <Badge className="bg-green-100 text-green-700">Excellent</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Excellent</Badge>
     } else if (performance > 0) {
-      return <Badge className="bg-yellow-100 text-yellow-700">Good</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Good</Badge>
     } else {
-      return <Badge className="bg-red-100 text-red-700">Poor</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Poor</Badge>
     }
   }
 
@@ -133,7 +133,7 @@ export default function DealersPage() {
         </div>
         <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
           <DialogTrigger asChild>
-            <Button className="bg-green-500 hover:bg-green-600 text-white">
+            <Button className="bg-cyan-500 hover:bg-cyan-600 text-white">
               <Plus className="w-4 h-4 mr-2" />
               Add Dealer
             </Button>
@@ -186,7 +186,7 @@ export default function DealersPage() {
               <Button variant="outline" onClick={() => setIsAddDialogOpen(false)}>
                 Cancel
               </Button>
-              <Button onClick={handleAddDealer} className="bg-green-500 hover:bg-green-600">
+              <Button onClick={handleAddDealer} className="bg-cyan-500 hover:bg-cyan-600">
                 Add Dealer
               </Button>
             </DialogFooter>
@@ -196,21 +196,21 @@ export default function DealersPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Dealers</CardTitle>
-            <Users className="h-4 w-4 text-green-500" />
+            <Users className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{dealers.length}</div>
-            <p className="text-xs text-green-600">{dealers.filter((d) => d.status === "Active").length} active</p>
+            <p className="text-xs text-cyan-600">{dealers.filter((d) => d.status === "Active").length} active</p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Sales</CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">
@@ -219,10 +219,10 @@ export default function DealersPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">
@@ -231,10 +231,10 @@ export default function DealersPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Avg Performance</CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">
@@ -245,7 +245,7 @@ export default function DealersPage() {
       </div>
 
       {/* Dealers Table */}
-      <Card className="border-green-200">
+      <Card className="border-cyan-200">
         <CardHeader>
           <CardTitle>Dealer Network</CardTitle>
           <CardDescription>Manage your dealer relationships and track performance</CardDescription>
@@ -273,10 +273,10 @@ export default function DealersPage() {
             </Select>
           </div>
 
-          <div className="rounded-md border border-green-100">
+          <div className="rounded-md border border-cyan-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-green-50">
+                <TableRow className="bg-cyan-50">
                   <TableHead className="font-semibold text-gray-900">Dealer</TableHead>
                   <TableHead className="font-semibold text-gray-900">Contact</TableHead>
                   <TableHead className="font-semibold text-gray-900">Location</TableHead>
@@ -315,15 +315,15 @@ export default function DealersPage() {
                       </div>
                     </TableCell>
                     <TableCell className="font-medium">₹{dealer.totalPurchase.toLocaleString()}</TableCell>
-                    <TableCell className="font-medium text-green-600">₹{dealer.totalProfit.toLocaleString()}</TableCell>
+                    <TableCell className="font-medium text-cyan-600">₹{dealer.totalProfit.toLocaleString()}</TableCell>
                     <TableCell>
                       <div className="flex items-center gap-2">
                         {dealer.performance > 0 ? (
-                          <TrendingUp className="w-4 h-4 text-green-500" />
+                          <TrendingUp className="w-4 h-4 text-cyan-500" />
                         ) : (
-                          <TrendingDown className="w-4 h-4 text-red-500" />
+                          <TrendingDown className="w-4 h-4 text-cyan-500" />
                         )}
-                        <span className={dealer.performance > 0 ? "text-green-600" : "text-red-600"}>
+                        <span className={dealer.performance > 0 ? "text-cyan-600" : "text-cyan-600"}>
                           {dealer.performance > 0 ? "+" : ""}
                           {dealer.performance}%
                         </span>
@@ -335,11 +335,11 @@ export default function DealersPage() {
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="text-green-600 hover:text-green-700 hover:bg-green-50"
+                          className="text-cyan-600 hover:text-cyan-700 hover:bg-cyan-50"
                         >
                           <Edit className="w-4 h-4" />
                         </Button>
-                        <Button variant="ghost" size="sm" className="text-red-600 hover:text-red-700 hover:bg-red-50">
+                        <Button variant="ghost" size="sm" className="text-cyan-600 hover:text-cyan-700 hover:bg-cyan-50">
                           <Trash2 className="w-4 h-4" />
                         </Button>
                       </div>

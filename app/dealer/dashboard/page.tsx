@@ -75,11 +75,11 @@ export default function DealerDashboard() {
           <p className="text-gray-600">Welcome back! Here's your business overview.</p>
         </div>
         <div className="flex gap-3">
-          <Button className="bg-green-500 hover:bg-green-600 text-white">
+          <Button className="bg-cyan-500 hover:bg-cyan-600 text-white">
             <Plus className="w-4 h-4 mr-2" />
             New Sale
           </Button>
-          <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
+          <Button variant="outline" className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent">
             <Eye className="w-4 h-4 mr-2" />
             View Inventory
           </Button>
@@ -88,38 +88,38 @@ export default function DealerDashboard() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Products Sold</CardTitle>
-            <ShoppingCart className="h-4 w-4 text-green-500" />
+            <ShoppingCart className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">130</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +15% this month
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
-            <DollarSign className="h-4 w-4 text-green-500" />
+            <DollarSign className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹18,000</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +22% from last month
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Remaining Stock</CardTitle>
-            <Package className="h-4 w-4 text-green-500" />
+            <Package className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">247</div>
@@ -130,14 +130,14 @@ export default function DealerDashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Avg. Profit Margin</CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">58.5%</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +3.2% improvement
             </p>
@@ -148,7 +148,7 @@ export default function DealerDashboard() {
       {/* Charts and Tables */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Profit Trend Chart */}
-        <Card className="border-green-200">
+        <Card className="border-cyan-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Profit & Sales Trend</CardTitle>
             <CardDescription>Your monthly profit and sales performance</CardDescription>
@@ -174,7 +174,7 @@ export default function DealerDashboard() {
         </Card>
 
         {/* Top Products */}
-        <Card className="border-green-200">
+        <Card className="border-cyan-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Top Performing Products</CardTitle>
             <CardDescription>Best products by profit margin</CardDescription>
@@ -184,8 +184,8 @@ export default function DealerDashboard() {
               {topProducts.map((product, index) => (
                 <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                      <span className="text-sm font-medium text-green-600">#{index + 1}</span>
+                    <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-medium text-cyan-600">#{index + 1}</span>
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">{product.name}</p>
@@ -194,7 +194,7 @@ export default function DealerDashboard() {
                   </div>
                   <div className="text-right">
                     <p className="font-medium text-gray-900">₹{product.profit.toLocaleString()}</p>
-                    <Badge className="bg-green-100 text-green-700">{product.margin.toFixed(1)}% margin</Badge>
+                    <Badge className="bg-cyan-100 text-cyan-700">{product.margin.toFixed(1)}% margin</Badge>
                   </div>
                 </div>
               ))}
@@ -204,7 +204,7 @@ export default function DealerDashboard() {
       </div>
 
       {/* Recent Sales */}
-      <Card className="border-green-200">
+      <Card className="border-cyan-200">
         <CardHeader>
           <CardTitle className="text-gray-900">Recent Sales</CardTitle>
           <CardDescription>Your latest transactions and profits</CardDescription>
@@ -226,8 +226,8 @@ export default function DealerDashboard() {
                       <p className="font-medium text-gray-900">₹{sale.salePrice.toLocaleString()}</p>
                       <p className="text-sm text-gray-600">Cost: ₹{sale.buyPrice.toLocaleString()}</p>
                       <div className="flex items-center gap-1 justify-end">
-                        <TrendingUp className="w-3 h-3 text-green-500" />
-                        <span className="text-sm font-medium text-green-600">+₹{sale.profit.toLocaleString()}</span>
+                        <TrendingUp className="w-3 h-3 text-cyan-500" />
+                        <span className="text-sm font-medium text-cyan-600">+₹{sale.profit.toLocaleString()}</span>
                       </div>
                     </div>
                   </div>
@@ -237,7 +237,7 @@ export default function DealerDashboard() {
           </div>
           <Button
             variant="outline"
-            className="w-full mt-4 border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
+            className="w-full mt-4 border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent"
           >
             <Eye className="w-4 h-4 mr-2" />
             View All Sales

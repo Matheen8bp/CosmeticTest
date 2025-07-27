@@ -120,13 +120,13 @@ export default function CustomerStorePage() {
   const isInCart = (productId: number) => cart.includes(productId)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-green-100">
+      <header className="bg-white shadow-sm border-b border-cyan-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
               <div>
@@ -137,21 +137,21 @@ export default function CustomerStorePage() {
             <div className="flex items-center gap-4">
               <Button
                 variant="outline"
-                className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
+                className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent"
                 onClick={() => (window.location.href = "/customer/settings")}
               >
                 <Settings className="w-4 h-4 mr-2" />
                 Settings
               </Button>
-              <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
+              <Button variant="outline" className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent">
                 <Heart className="w-4 h-4 mr-2" />
                 Wishlist
               </Button>
-              <Button className="bg-green-500 hover:bg-green-600 text-white relative">
+              <Button className="bg-cyan-500 hover:bg-cyan-600 text-white relative">
                 <ShoppingCart className="w-4 h-4 mr-2" />
                 Cart
                 {cart.length > 0 && (
-                  <Badge className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 min-w-[20px] h-5 flex items-center justify-center rounded-full">
+                  <Badge className="absolute -top-2 -right-2 bg-cyan-500 text-white text-xs px-1 min-w-[20px] h-5 flex items-center justify-center rounded-full">
                     {cart.length}
                   </Badge>
                 )}
@@ -171,7 +171,7 @@ export default function CustomerStorePage() {
         </div>
 
         {/* Filters */}
-        <Card className="border-green-200 mb-8">
+        <Card className="border-cyan-200 mb-8">
           <CardContent className="p-6">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="relative flex-1">
@@ -207,7 +207,7 @@ export default function CustomerStorePage() {
                   <SelectItem value="newest">Newest</SelectItem>
                 </SelectContent>
               </Select>
-              <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
+              <Button variant="outline" className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent">
                 <Filter className="w-4 h-4 mr-2" />
                 More Filters
               </Button>
@@ -218,7 +218,7 @@ export default function CustomerStorePage() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProducts.map((product) => (
-            <Card key={product.id} className="border-green-200 hover:shadow-lg transition-shadow duration-200">
+            <Card key={product.id} className="border-cyan-200 hover:shadow-lg transition-shadow duration-200">
               <CardContent className="p-0">
                 <div className="relative">
                   <img
@@ -227,11 +227,11 @@ export default function CustomerStorePage() {
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
                   {product.discount > 0 && (
-                    <Badge className="absolute top-2 left-2 bg-red-500 text-white">{product.discount}% OFF</Badge>
+                    <Badge className="absolute top-2 left-2 bg-cyan-500 text-white">{product.discount}% OFF</Badge>
                   )}
                   {!product.inStock && (
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-t-lg">
-                      <Badge variant="destructive" className="bg-red-600 text-white">
+                      <Badge variant="destructive" className="bg-cyan-600 text-white">
                         Out of Stock
                       </Badge>
                     </div>
@@ -247,7 +247,7 @@ export default function CustomerStorePage() {
 
                 <div className="p-4">
                   <div className="mb-2">
-                    <Badge variant="outline" className="text-xs text-green-600 border-green-200">
+                    <Badge variant="outline" className="text-xs text-cyan-600 border-cyan-200">
                       {product.brand}
                     </Badge>
                   </div>
@@ -261,7 +261,7 @@ export default function CustomerStorePage() {
                         <Star
                           key={i}
                           className={`w-4 h-4 ${
-                            i < Math.floor(product.rating) ? "text-yellow-400 fill-current" : "text-gray-300"
+                            i < Math.floor(product.rating) ? "text-cyan-400 fill-current" : "text-gray-300"
                           }`}
                         />
                       ))}
@@ -280,21 +280,21 @@ export default function CustomerStorePage() {
                         </span>
                       )}
                     </div>
-                    <Badge className="bg-green-100 text-green-700">{product.category}</Badge>
+                    <Badge className="bg-cyan-100 text-cyan-700">{product.category}</Badge>
                   </div>
 
                   <div className="flex gap-2">
                     <Button
                       variant="outline"
                       size="sm"
-                      className="flex-1 border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
+                      className="flex-1 border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent"
                     >
                       <Eye className="w-4 h-4 mr-1" />
                       View
                     </Button>
                     <Button
                       size="sm"
-                      className="flex-1 bg-green-500 hover:bg-green-600 text-white"
+                      className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white"
                       disabled={!product.inStock}
                       onClick={() => (isInCart(product.id) ? removeFromCart(product.id) : addToCart(product.id))}
                     >

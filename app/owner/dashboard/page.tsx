@@ -57,11 +57,11 @@ export default function OwnerDashboard() {
           <p className="text-gray-600">Welcome back! Here's your business overview.</p>
         </div>
         <div className="flex gap-3">
-          <Button className="bg-green-500 hover:bg-green-600 text-white">
+          <Button className="bg-cyan-500 hover:bg-cyan-600 text-white">
             <Plus className="w-4 h-4 mr-2" />
             Add Product
           </Button>
-          <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
+          <Button variant="outline" className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent">
             <Plus className="w-4 h-4 mr-2" />
             Add Dealer
           </Button>
@@ -70,24 +70,24 @@ export default function OwnerDashboard() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Dealers</CardTitle>
-            <Users className="h-4 w-4 text-green-500" />
+            <Users className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">24</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +2 this month
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Inventory</CardTitle>
-            <Package className="h-4 w-4 text-green-500" />
+            <Package className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">1,247</div>
@@ -98,106 +98,39 @@ export default function OwnerDashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Products Sold</CardTitle>
-            <ShoppingCart className="h-4 w-4 text-green-500" />
+            <ShoppingCart className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">3,456</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +12% from last month
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-green-500" />
+            <DollarSign className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹67,000</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +8.2% from last month
             </p>
           </CardContent>
         </Card>
       </div>
-
-      {/* Charts Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Revenue Chart */}
-        <Card className="border-green-200">
-          <CardHeader>
-            <CardTitle className="text-gray-900">Monthly Revenue & Profit</CardTitle>
-            <CardDescription>Revenue and profit trends over the last 6 months</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <LineChart data={revenueData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                <XAxis dataKey="month" stroke="#666" />
-                <YAxis stroke="#666" />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: "white",
-                    border: "1px solid rgb(83, 236, 93)",
-                    borderRadius: "8px",
-                  }}
-                />
-                <Line type="monotone" dataKey="revenue" stroke="rgb(83, 236, 93)" strokeWidth={3} name="Revenue" />
-                <Line type="monotone" dataKey="profit" stroke="rgb(83, 236, 93)" strokeWidth={2} name="Profit" />
-              </LineChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-
-        {/* Category Distribution */}
-        <Card className="border-green-200">
-          <CardHeader>
-            <CardTitle className="text-gray-900">Sales by Category</CardTitle>
-            <CardDescription>Product category distribution</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <PieChart>
-                <Pie
-                  data={categoryData}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={60}
-                  outerRadius={100}
-                  paddingAngle={5}
-                  dataKey="value"
-                >
-                  {categoryData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </ResponsiveContainer>
-            <div className="grid grid-cols-2 gap-2 mt-4">
-              {categoryData.map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.color }} />
-                  <span className="text-sm text-gray-600">
-                    {item.name} ({item.value}%)
-                  </span>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
+      
       {/* Tables Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Top Dealers */}
-        <Card className="border-green-200">
+        <Card className="border-cyan-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Top Performing Dealers</CardTitle>
             <CardDescription>Best dealers by sales performance</CardDescription>
@@ -207,8 +140,8 @@ export default function OwnerDashboard() {
               {topDealers.map((dealer, index) => (
                 <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                      <span className="text-sm font-medium text-green-600">#{index + 1}</span>
+                    <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-medium text-cyan-600">#{index + 1}</span>
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">{dealer.name}</p>
@@ -219,11 +152,11 @@ export default function OwnerDashboard() {
                     <p className="font-medium text-gray-900">₹{dealer.profit.toLocaleString()}</p>
                     <div className="flex items-center gap-1">
                       {dealer.growth > 0 ? (
-                        <TrendingUp className="w-3 h-3 text-green-500" />
+                        <TrendingUp className="w-3 h-3 text-cyan-500" />
                       ) : (
-                        <TrendingDown className="w-3 h-3 text-red-500" />
+                        <TrendingDown className="w-3 h-3 text-cyan-500" />
                       )}
-                      <span className={`text-xs ${dealer.growth > 0 ? "text-green-600" : "text-red-600"}`}>
+                      <span className={`text-xs ${dealer.growth > 0 ? "text-cyan-600" : "text-cyan-600"}`}>
                         {dealer.growth > 0 ? "+" : ""}
                         {dealer.growth}%
                       </span>
@@ -236,7 +169,7 @@ export default function OwnerDashboard() {
         </Card>
 
         {/* Recent Transactions */}
-        <Card className="border-green-200">
+        <Card className="border-cyan-200">
           <CardHeader>
             <CardTitle className="text-gray-900">Recent Transactions</CardTitle>
             <CardDescription>Latest sales to dealers</CardDescription>
@@ -254,7 +187,7 @@ export default function OwnerDashboard() {
                   </div>
                   <div className="text-right">
                     <p className="font-medium text-gray-900">₹{transaction.amount.toLocaleString()}</p>
-                    <Badge variant="secondary" className="bg-green-100 text-green-700">
+                    <Badge variant="secondary" className="bg-cyan-100 text-cyan-700">
                       Completed
                     </Badge>
                   </div>
@@ -263,7 +196,7 @@ export default function OwnerDashboard() {
             </div>
             <Button
               variant="outline"
-              className="w-full mt-4 border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
+              className="w-full mt-4 border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent"
             >
               <Eye className="w-4 h-4 mr-2" />
               View All Transactions

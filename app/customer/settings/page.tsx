@@ -60,13 +60,13 @@ export default function CustomerSettingsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-green-100">
+      <header className="bg-white shadow-sm border-b border-cyan-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <Button variant="ghost" className="text-green-600 hover:bg-green-50">
+              <Button variant="ghost" className="text-cyan-600 hover:bg-cyan-50">
                 ← Back to Store
               </Button>
             </div>
@@ -74,12 +74,12 @@ export default function CustomerSettingsPage() {
               <Button
                 variant="outline"
                 onClick={handleReset}
-                className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
+                className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Reset
               </Button>
-              <Button onClick={handleSave} className="bg-green-500 hover:bg-green-600 text-white">
+              <Button onClick={handleSave} className="bg-cyan-500 hover:bg-cyan-600 text-white">
                 <Save className="w-4 h-4 mr-2" />
                 Save Changes
               </Button>
@@ -120,7 +120,7 @@ export default function CustomerSettingsPage() {
 
           {/* Profile Settings */}
           <TabsContent value="profile" className="space-y-6">
-            <Card className="border-green-200">
+            <Card className="border-cyan-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <User className="w-5 h-5" />
@@ -130,11 +130,11 @@ export default function CustomerSettingsPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center gap-6">
-                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-                    <User className="w-8 h-8 text-green-600" />
+                  <div className="w-20 h-20 bg-cyan-100 rounded-full flex items-center justify-center">
+                    <User className="w-8 h-8 text-cyan-600" />
                   </div>
                   <div className="space-y-2">
-                    <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
+                    <Button variant="outline" className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent">
                       <Upload className="w-4 h-4 mr-2" />
                       Upload Photo
                     </Button>
@@ -185,7 +185,7 @@ export default function CustomerSettingsPage() {
                       <Input id="newPassword" type="password" />
                     </div>
                   </div>
-                  <Button className="bg-green-500 hover:bg-green-600 text-white">Update Password</Button>
+                  <Button className="bg-cyan-500 hover:bg-cyan-600 text-white">Update Password</Button>
                 </div>
               </CardContent>
             </Card>
@@ -193,7 +193,7 @@ export default function CustomerSettingsPage() {
 
           {/* Addresses */}
           <TabsContent value="addresses" className="space-y-6">
-            <Card className="border-green-200">
+            <Card className="border-cyan-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MapPin className="w-5 h-5" />
@@ -203,19 +203,19 @@ export default function CustomerSettingsPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 {settings.addresses.map((address) => (
-                  <div key={address.id} className="p-4 border border-green-100 rounded-lg">
+                  <div key={address.id} className="p-4 border border-cyan-100 rounded-lg">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
                         <h3 className="font-medium">{address.type}</h3>
                         {address.isDefault && (
-                          <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Default</span>
+                          <span className="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded">Default</span>
                         )}
                       </div>
                       <div className="flex gap-2">
-                        <Button variant="ghost" size="sm" className="text-green-600 hover:bg-green-50">
+                        <Button variant="ghost" size="sm" className="text-cyan-600 hover:bg-cyan-50">
                           Edit
                         </Button>
-                        <Button variant="ghost" size="sm" className="text-red-600 hover:bg-red-50">
+                        <Button variant="ghost" size="sm" className="text-cyan-600 hover:bg-cyan-50">
                           Delete
                         </Button>
                       </div>
@@ -226,7 +226,7 @@ export default function CustomerSettingsPage() {
 
                 <Button
                   variant="outline"
-                  className="w-full border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
+                  className="w-full border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent"
                 >
                   <MapPin className="w-4 h-4 mr-2" />
                   Add New Address
@@ -237,7 +237,7 @@ export default function CustomerSettingsPage() {
 
           {/* Notifications */}
           <TabsContent value="notifications" className="space-y-6">
-            <Card className="border-green-200">
+            <Card className="border-cyan-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Bell className="w-5 h-5" />
@@ -310,7 +310,7 @@ export default function CustomerSettingsPage() {
 
           {/* Privacy */}
           <TabsContent value="privacy" className="space-y-6">
-            <Card className="border-green-200">
+            <Card className="border-cyan-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Shield className="w-5 h-5" />
@@ -354,7 +354,7 @@ export default function CustomerSettingsPage() {
 
           {/* Preferences */}
           <TabsContent value="preferences" className="space-y-6">
-            <Card className="border-green-200">
+            <Card className="border-cyan-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Settings className="w-5 h-5" />

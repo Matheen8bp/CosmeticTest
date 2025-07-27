@@ -122,7 +122,7 @@ export default function SellProductPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Sale Form */}
-        <Card className="border-green-200">
+        <Card className="border-cyan-200">
           <CardHeader>
             <CardTitle className="text-gray-900">New Sale</CardTitle>
             <CardDescription>Enter sale details and customer information</CardDescription>
@@ -160,7 +160,7 @@ export default function SellProductPage() {
             </div>
 
             {product && (
-              <div className="p-3 bg-green-50 rounded-lg">
+              <div className="p-3 bg-cyan-50 rounded-lg">
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-gray-600">SKU:</span>
@@ -195,7 +195,7 @@ export default function SellProductPage() {
                 min="1"
               />
               {product && quantity && Number.parseInt(quantity) > product.stock && (
-                <p className="text-sm text-red-600">Quantity exceeds available stock ({product.stock})</p>
+                <p className="text-sm text-cyan-600">Quantity exceeds available stock ({product.stock})</p>
               )}
             </div>
 
@@ -237,7 +237,7 @@ export default function SellProductPage() {
 
             <Button
               onClick={handleSale}
-              className="w-full bg-green-500 hover:bg-green-600 text-white"
+              className="w-full bg-cyan-500 hover:bg-cyan-600 text-white"
               disabled={
                 !product ||
                 !quantity ||
@@ -253,7 +253,7 @@ export default function SellProductPage() {
         </Card>
 
         {/* Profit Calculator */}
-        <Card className="border-green-200">
+        <Card className="border-cyan-200">
           <CardHeader>
             <CardTitle className="text-gray-900 flex items-center gap-2">
               <Calculator className="w-5 h-5" />
@@ -279,17 +279,17 @@ export default function SellProductPage() {
                   </div>
                 </div>
 
-                <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                <div className="p-4 bg-cyan-50 rounded-lg border border-cyan-200">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm text-green-600">Total Profit</p>
-                      <p className="text-2xl font-bold text-green-700">₹{calculateProfit().toLocaleString()}</p>
+                      <p className="text-sm text-cyan-600">Total Profit</p>
+                      <p className="text-2xl font-bold text-cyan-700">₹{calculateProfit().toLocaleString()}</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm text-green-600">Profit Margin</p>
+                      <p className="text-sm text-cyan-600">Profit Margin</p>
                       <div className="flex items-center gap-1">
-                        <TrendingUp className="w-4 h-4 text-green-500" />
-                        <span className="text-xl font-bold text-green-700">{calculateProfitMargin().toFixed(1)}%</span>
+                        <TrendingUp className="w-4 h-4 text-cyan-500" />
+                        <span className="text-xl font-bold text-cyan-700">{calculateProfitMargin().toFixed(1)}%</span>
                       </div>
                     </div>
                   </div>
@@ -308,7 +308,7 @@ export default function SellProductPage() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Profit per unit:</span>
-                      <span className="text-green-600">
+                      <span className="text-cyan-600">
                         ₹{(Number.parseFloat(sellingPrice) - product.buyingPrice).toLocaleString()}
                       </span>
                     </div>
@@ -330,7 +330,7 @@ export default function SellProductPage() {
       </div>
 
       {/* Quick Actions */}
-      <Card className="border-green-200">
+      <Card className="border-cyan-200">
         <CardHeader>
           <CardTitle className="text-gray-900">Quick Actions</CardTitle>
           <CardDescription>Frequently used products for quick sales</CardDescription>
@@ -340,7 +340,7 @@ export default function SellProductPage() {
             {availableProducts.slice(0, 3).map((product) => (
               <div
                 key={product.id}
-                className="p-4 border border-green-100 rounded-lg hover:bg-green-50 transition-colors"
+                className="p-4 border border-cyan-100 rounded-lg hover:bg-cyan-50 transition-colors"
               >
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-medium text-gray-900">{product.name}</h3>
@@ -354,7 +354,7 @@ export default function SellProductPage() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
+                  className="w-full border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent"
                   onClick={() => {
                     setSelectedProduct(product.id)
                     setSellingPrice(product.currentSellingPrice.toString())

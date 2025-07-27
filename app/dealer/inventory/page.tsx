@@ -101,28 +101,28 @@ export default function InventoryPage() {
   const getStockBadge = (stock: number) => {
     if (stock === 0) {
       return (
-        <Badge variant="destructive" className="bg-red-100 text-red-700">
+        <Badge variant="destructive" className="bg-cyan-100 text-cyan-700">
           Out of Stock
         </Badge>
       )
     } else if (stock <= 10) {
       return (
-        <Badge variant="secondary" className="bg-yellow-100 text-yellow-700">
+        <Badge variant="secondary" className="bg-cyan-100 text-cyan-700">
           Low Stock
         </Badge>
       )
     } else {
-      return <Badge className="bg-green-100 text-green-700">In Stock</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">In Stock</Badge>
     }
   }
 
   const getProfitBadge = (margin: number) => {
     if (margin >= 60) {
-      return <Badge className="bg-green-100 text-green-700">High Profit</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">High Profit</Badge>
     } else if (margin >= 40) {
-      return <Badge className="bg-yellow-100 text-yellow-700">Medium</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Medium</Badge>
     } else {
-      return <Badge className="bg-red-100 text-red-700">Low Profit</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Low Profit</Badge>
     }
   }
 
@@ -146,7 +146,7 @@ export default function InventoryPage() {
           <h1 className="text-3xl font-bold text-gray-900">Inventory Management</h1>
           <p className="text-gray-600">Manage your product inventory and pricing</p>
         </div>
-        <Button className="bg-green-500 hover:bg-green-600 text-white">
+        <Button className="bg-cyan-500 hover:bg-cyan-600 text-white">
           <ShoppingCart className="w-4 h-4 mr-2" />
           Request Restock
         </Button>
@@ -154,10 +154,10 @@ export default function InventoryPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Products</CardTitle>
-            <Package className="h-4 w-4 text-green-500" />
+            <Package className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{totalProducts}</div>
@@ -165,10 +165,10 @@ export default function InventoryPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Inventory Value</CardTitle>
-            <Package className="h-4 w-4 text-green-500" />
+            <Package className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹{totalInventoryValue.toLocaleString()}</div>
@@ -176,31 +176,31 @@ export default function InventoryPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹{totalProfit.toLocaleString()}</div>
-            <p className="text-xs text-green-600">From sales</p>
+            <p className="text-xs text-cyan-600">From sales</p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Low Stock Items</CardTitle>
-            <AlertTriangle className="h-4 w-4 text-yellow-500" />
+            <AlertTriangle className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{lowStockItems}</div>
-            <p className="text-xs text-yellow-600">Need attention</p>
+            <p className="text-xs text-cyan-600">Need attention</p>
           </CardContent>
         </Card>
       </div>
 
       {/* Inventory Table */}
-      <Card className="border-green-200">
+      <Card className="border-cyan-200">
         <CardHeader>
           <CardTitle>Product Inventory</CardTitle>
           <CardDescription>Manage your stock levels and pricing</CardDescription>
@@ -230,10 +230,10 @@ export default function InventoryPage() {
             </Select>
           </div>
 
-          <div className="rounded-md border border-green-100">
+          <div className="rounded-md border border-cyan-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-green-50">
+                <TableRow className="bg-cyan-50">
                   <TableHead className="font-semibold text-gray-900">Product</TableHead>
                   <TableHead className="font-semibold text-gray-900">SKU</TableHead>
                   <TableHead className="font-semibold text-gray-900">Buying Price</TableHead>
@@ -270,14 +270,14 @@ export default function InventoryPage() {
                           <Button
                             size="sm"
                             onClick={() => handlePriceUpdate(item.id)}
-                            className="bg-green-500 hover:bg-green-600"
+                            className="bg-cyan-500 hover:bg-cyan-600"
                           >
                             Save
                           </Button>
                         </div>
                       ) : (
                         <div className="flex items-center gap-2">
-                          <span className="font-medium text-green-600">₹{item.sellingPrice.toLocaleString()}</span>
+                          <span className="font-medium text-cyan-600">₹{item.sellingPrice.toLocaleString()}</span>
                           <Button
                             variant="ghost"
                             size="sm"
@@ -285,7 +285,7 @@ export default function InventoryPage() {
                               setEditingPrice(item.id)
                               setNewPrice(item.sellingPrice.toString())
                             }}
-                            className="text-green-600 hover:text-green-700 hover:bg-green-50"
+                            className="text-cyan-600 hover:text-cyan-700 hover:bg-cyan-50"
                           >
                             <Edit className="w-3 h-3" />
                           </Button>
@@ -296,24 +296,24 @@ export default function InventoryPage() {
                       <span
                         className={`font-medium ${
                           item.remainingStock <= 5
-                            ? "text-red-600"
+                            ? "text-cyan-600"
                             : item.remainingStock <= 10
-                              ? "text-yellow-600"
-                              : "text-green-600"
+                              ? "text-cyan-600"
+                              : "text-cyan-600"
                         }`}
                       >
                         {item.remainingStock}
                       </span>
                     </TableCell>
                     <TableCell>{item.quantitySold}</TableCell>
-                    <TableCell className="font-medium text-green-600">₹{item.profit.toLocaleString()}</TableCell>
+                    <TableCell className="font-medium text-cyan-600">₹{item.profit.toLocaleString()}</TableCell>
                     <TableCell>{getProfitBadge(item.profitMargin)}</TableCell>
                     <TableCell>{getStockBadge(item.remainingStock)}</TableCell>
                     <TableCell>
                       <Button
                         variant="outline"
                         size="sm"
-                        className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent"
+                        className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent"
                       >
                         Sell
                       </Button>

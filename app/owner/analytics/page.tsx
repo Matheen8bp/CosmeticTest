@@ -83,7 +83,7 @@ export default function AnalyticsPage() {
               <SelectItem value="1year">Last Year</SelectItem>
             </SelectContent>
           </Select>
-          <Button variant="outline" className="border-green-200 text-green-600 hover:bg-green-50 bg-transparent">
+          <Button variant="outline" className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 bg-transparent">
             <Download className="w-4 h-4 mr-2" />
             Export Report
           </Button>
@@ -92,56 +92,56 @@ export default function AnalyticsPage() {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-green-500" />
+            <DollarSign className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹3,28,000</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +12.5% from last period
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Profit</CardTitle>
-            <Target className="h-4 w-4 text-green-500" />
+            <Target className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹96,900</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +18.3% from last period
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Active Dealers</CardTitle>
-            <Users className="h-4 w-4 text-green-500" />
+            <Users className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">24</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +2 new this month
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Avg Order Value</CardTitle>
-            <Package className="h-4 w-4 text-green-500" />
+            <Package className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">₹5,410</div>
-            <p className="text-xs text-green-600 flex items-center mt-1">
+            <p className="text-xs text-cyan-600 flex items-center mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +8.7% from last period
             </p>
@@ -149,145 +149,8 @@ export default function AnalyticsPage() {
         </Card>
       </div>
 
-      {/* Charts Row 1 */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Revenue & Profit Trend */}
-        <Card className="border-green-200">
-          <CardHeader>
-            <CardTitle className="text-gray-900">Revenue & Profit Trend</CardTitle>
-            <CardDescription>Monthly performance over the last 6 months</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <AreaChart data={monthlyData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                <XAxis dataKey="month" stroke="#666" />
-                <YAxis stroke="#666" />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: "white",
-                    border: "1px solid #FF69B4",
-                    borderRadius: "8px",
-                  }}
-                />
-                <Area
-                  type="monotone"
-                  dataKey="revenue"
-                  stackId="1"
-                  stroke="#FF69B4"
-                  fill="#FF69B4"
-                  fillOpacity={0.3}
-                  name="Revenue"
-                />
-                <Area
-                  type="monotone"
-                  dataKey="profit"
-                  stackId="2"
-                  stroke="#FF85C1"
-                  fill="#FF85C1"
-                  fillOpacity={0.6}
-                  name="Profit"
-                />
-              </AreaChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-
-        {/* Category Distribution */}
-        <Card className="border-green-200">
-          <CardHeader>
-            <CardTitle className="text-gray-900">Sales by Category</CardTitle>
-            <CardDescription>Revenue distribution across product categories</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <PieChart>
-                <Pie
-                  data={categoryData}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={60}
-                  outerRadius={100}
-                  paddingAngle={5}
-                  dataKey="value"
-                >
-                  {categoryData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </ResponsiveContainer>
-            <div className="grid grid-cols-2 gap-2 mt-4">
-              {categoryData.map((item, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.color }} />
-                    <span className="text-sm text-gray-600">{item.name}</span>
-                  </div>
-                  <span className="text-sm font-medium">₹{(item.revenue / 1000).toFixed(0)}K</span>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Charts Row 2 */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Dealer Performance */}
-        <Card className="border-green-200">
-          <CardHeader>
-            <CardTitle className="text-gray-900">Top Dealer Performance</CardTitle>
-            <CardDescription>Sales performance by dealer</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={dealerPerformance} layout="horizontal">
-                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                <XAxis type="number" stroke="#666" />
-                <YAxis dataKey="name" type="category" stroke="#666" width={100} />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: "white",
-                    border: "1px solid #FF69B4",
-                    borderRadius: "8px",
-                  }}
-                />
-                <Bar dataKey="sales" fill="#FF69B4" name="Sales" />
-              </BarChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-
-        {/* Profit Margin Trend */}
-        <Card className="border-green-200">
-          <CardHeader>
-            <CardTitle className="text-gray-900">Profit Margin Trend</CardTitle>
-            <CardDescription>Monthly profit margin percentage</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <LineChart data={profitMarginData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                <XAxis dataKey="month" stroke="#666" />
-                <YAxis stroke="#666" />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: "white",
-                    border: "1px solid #FF69B4",
-                    borderRadius: "8px",
-                  }}
-                />
-                <Line type="monotone" dataKey="margin" stroke="#FF69B4" strokeWidth={3} name="Profit Margin %" />
-              </LineChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-      </div>
-
       {/* Top Products Table */}
-      <Card className="border-green-200">
+      <Card className="border-cyan-200">
         <CardHeader>
           <CardTitle className="text-gray-900">Top Performing Products</CardTitle>
           <CardDescription>Best-selling products with performance metrics</CardDescription>
@@ -297,8 +160,8 @@ export default function AnalyticsPage() {
             {topProducts.map((product, index) => (
               <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-bold text-green-600">#{index + 1}</span>
+                  <div className="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center">
+                    <span className="text-sm font-bold text-cyan-600">#{index + 1}</span>
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">{product.name}</p>
@@ -311,17 +174,17 @@ export default function AnalyticsPage() {
                     <p className="text-sm text-gray-600">Revenue</p>
                   </div>
                   <div className="text-right">
-                    <p className="font-medium text-green-600">₹{product.profit.toLocaleString()}</p>
+                    <p className="font-medium text-cyan-600">₹{product.profit.toLocaleString()}</p>
                     <p className="text-sm text-gray-600">Profit</p>
                   </div>
                   <div className="text-right">
                     <div className="flex items-center gap-1">
                       {product.growth > 0 ? (
-                        <TrendingUp className="w-4 h-4 text-green-500" />
+                        <TrendingUp className="w-4 h-4 text-cyan-500" />
                       ) : (
-                        <TrendingDown className="w-4 h-4 text-red-500" />
+                        <TrendingDown className="w-4 h-4 text-cyan-500" />
                       )}
-                      <span className={`font-medium ${product.growth > 0 ? "text-green-600" : "text-red-600"}`}>
+                      <span className={`font-medium ${product.growth > 0 ? "text-cyan-600" : "text-cyan-600"}`}>
                         {product.growth > 0 ? "+" : ""}
                         {product.growth}%
                       </span>

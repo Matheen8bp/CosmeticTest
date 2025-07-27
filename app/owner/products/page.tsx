@@ -91,19 +91,19 @@ export default function ProductsPage() {
   const getStatusBadge = (status: string, quantity: number) => {
     if (status === "Out of Stock" || quantity === 0) {
       return (
-        <Badge variant="destructive" className="bg-red-100 text-red-700">
+        <Badge variant="destructive" className="bg-cyan-100 text-cyan-700">
           Out of Stock
         </Badge>
       )
     } else if (status === "Low Stock" || quantity < 100) {
       return (
-        <Badge variant="secondary" className="bg-yellow-100 text-yellow-700">
+        <Badge variant="secondary" className="bg-cyan-100 text-cyan-700">
           Low Stock
         </Badge>
       )
     } else {
       return (
-        <Badge variant="secondary" className="bg-green-100 text-green-700">
+        <Badge variant="secondary" className="bg-cyan-100 text-cyan-700">
           In Stock
         </Badge>
       )
@@ -112,11 +112,11 @@ export default function ProductsPage() {
 
   const getProfitBadge = (profit: number) => {
     if (profit >= 40) {
-      return <Badge className="bg-green-100 text-green-700">High Profit</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">High Profit</Badge>
     } else if (profit >= 20) {
-      return <Badge className="bg-yellow-100 text-yellow-700">Medium</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Medium</Badge>
     } else {
-      return <Badge className="bg-red-100 text-red-700">Low Profit</Badge>
+      return <Badge className="bg-cyan-100 text-cyan-700">Low Profit</Badge>
     }
   }
 
@@ -148,7 +148,7 @@ export default function ProductsPage() {
         </div>
         <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
           <DialogTrigger asChild>
-            <Button className="bg-green-500 hover:bg-green-600 text-white">
+            <Button className="bg-cyan-500 hover:bg-cyan-600 text-white">
               <Plus className="w-4 h-4 mr-2" />
               Add Product
             </Button>
@@ -231,7 +231,7 @@ export default function ProductsPage() {
                 </div>
               </div>
               {newProduct.manufacturerPrice && (
-                <div className="p-3 bg-green-50 rounded-lg">
+                <div className="p-3 bg-cyan-50 rounded-lg">
                   <p className="text-sm text-gray-600">
                     <strong>Calculated Dealer Price:</strong> ₹
                     {calculateOwnerToDealer(Number.parseInt(newProduct.manufacturerPrice)).toFixed(2)}
@@ -244,7 +244,7 @@ export default function ProductsPage() {
               <Button variant="outline" onClick={() => setIsAddDialogOpen(false)}>
                 Cancel
               </Button>
-              <Button onClick={handleAddProduct} className="bg-green-500 hover:bg-green-600">
+              <Button onClick={handleAddProduct} className="bg-cyan-500 hover:bg-cyan-600">
                 Add Product
               </Button>
             </DialogFooter>
@@ -254,20 +254,20 @@ export default function ProductsPage() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Products</CardTitle>
-            <Package className="h-4 w-4 text-green-500" />
+            <Package className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{products.length}</div>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Total Stock</CardTitle>
-            <Package className="h-4 w-4 text-green-500" />
+            <Package className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">
@@ -276,20 +276,20 @@ export default function ProductsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Low Stock Items</CardTitle>
-            <AlertTriangle className="h-4 w-4 text-yellow-500" />
+            <AlertTriangle className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">{products.filter((p) => p.quantity < 100).length}</div>
           </CardContent>
         </Card>
 
-        <Card className="border-green-200 shadow-lg shadow-green-100/50">
+        <Card className="border-cyan-200 shadow-lg shadow-cyan-100/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Avg. Profit Margin</CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <TrendingUp className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-gray-900">50%</div>
@@ -298,7 +298,7 @@ export default function ProductsPage() {
       </div>
 
       {/* Search and Filters */}
-      <Card className="border-green-200">
+      <Card className="border-cyan-200">
         <CardHeader>
           <CardTitle>Product Inventory</CardTitle>
           <CardDescription>Manage your product catalog and pricing</CardDescription>
@@ -329,10 +329,10 @@ export default function ProductsPage() {
           </div>
 
           {/* Products Table */}
-          <div className="rounded-md border border-green-100">
+          <div className="rounded-md border border-cyan-100">
             <Table>
               <TableHeader>
-                <TableRow className="bg-green-50">
+                <TableRow className="bg-cyan-50">
                   <TableHead className="font-semibold text-gray-900">Product</TableHead>
                   <TableHead className="font-semibold text-gray-900">SKU</TableHead>
                   <TableHead className="font-semibold text-gray-900">MRP</TableHead>
@@ -356,12 +356,12 @@ export default function ProductsPage() {
                     <TableCell className="font-mono text-sm">{product.sku}</TableCell>
                     <TableCell className="font-medium">₹{product.mrp.toLocaleString()}</TableCell>
                     <TableCell>₹{product.manufacturerPrice.toLocaleString()}</TableCell>
-                    <TableCell className="font-medium text-green-600">
+                    <TableCell className="font-medium text-cyan-600">
                       ₹{product.ownerToDealer.toLocaleString()}
                     </TableCell>
                     <TableCell>
                       <span
-                        className={`font-medium ${product.quantity < 50 ? "text-red-600" : product.quantity < 100 ? "text-yellow-600" : "text-green-600"}`}
+                        className={`font-medium ${product.quantity < 50 ? "text-cyan-600" : product.quantity < 100 ? "text-cyan-600" : "text-cyan-600"}`}
                       >
                         {product.quantity}
                       </span>
@@ -373,11 +373,11 @@ export default function ProductsPage() {
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="text-green-600 hover:text-green-700 hover:bg-green-50"
+                          className="text-cyan-600 hover:text-cyan-700 hover:bg-cyan-50"
                         >
                           <Edit className="w-4 h-4" />
                         </Button>
-                        <Button variant="ghost" size="sm" className="text-red-600 hover:text-red-700 hover:bg-red-50">
+                        <Button variant="ghost" size="sm" className="text-cyan-600 hover:text-cyan-700 hover:bg-cyan-50">
                           <Trash2 className="w-4 h-4" />
                         </Button>
                       </div>
